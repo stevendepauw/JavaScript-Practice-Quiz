@@ -1,8 +1,42 @@
-.test {
-    display: grid;
-    min-height: 100vh;
-};
-
-.time {
+/* main "grid" layout */
+.main { 
     display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+    margin: auto;
+    gap: 3rem;
+}
+
+/* Header ish area for highscores and the timer */
+.head {
+    display: inline-flex;
+    max-width: 60rem;
+    height: 15%;
+    justify-content: space-between;
+    padding-top: 5rem;
+}
+
+#highscore {
+    color: blueviolet;
+    font-weight: 600;
+}
+
+/* quiestion asking area */
+.quiz {
+    display: inline-flex;
+    flex-direction: column;
+    max-width: 50rem;
+    height: 70%;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 2rem;
+    padding: 1rem;
+}
+
+#question {
+    font-weight: bolder;
+    font-size: 1.2rem;
 }
