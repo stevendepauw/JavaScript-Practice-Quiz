@@ -8,7 +8,6 @@ let option3 = document.createElement("button");
 let option4 = document.createElement("button");
 
 let i = 0
-let timerCount = 0
 
 let allQuestions = [
     "Commonly used data types DO NOT include:", 
@@ -97,7 +96,8 @@ function startA() {
 
 start.addEventListener("click", function() {
     choices.textContent = "";
-
+    document.getElementById("start-test").classList.add("hide");
+    // startTimer();
     startQ();
     startA();
 });
@@ -109,13 +109,13 @@ function nextQ() {
 
 function nextA() {
     // once the final question is answered i need the area asking questions to change to a <p> that tells the palyer to enter therir intials followed byt a textbox input for them to do so in. also ned a submit button added that will change the stuff again to the page diaplying all of the previous highscores 
-    // if(i > options.length - 1) {
-    //     let enterI = document.createElement("p");
-    //     let enterInitialBox = createElement("input");
+    if(i > options.length - 1) {
+        // let enterI = document.createElement("p");
+        // let enterInitialBox = createElement("input");
 
-    //     questionAsk.textContent = "All done!";
-    //     choices.textContent = "Your final score is: "
-    // };
+        questionAsk.textContent = "All done!";
+        choices.textContent = "Your final score is: "
+    };
 
     option1.textContent = options[i][0];
     option2.textContent = options[i][1];
